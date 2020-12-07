@@ -1,0 +1,24 @@
+--- 
+- 
+  hosts: all
+  tasks: 
+    - 
+      command: "docker stop tomcat"
+      ignore_errors: true
+      name: "stop the container"
+    - 
+      command: "docker rm tomcat"
+      ignore_errors: true
+      name: "Remove the container"
+    - 
+      command: "docker rmi tomcat"
+      ignore_errors: true
+      name: "stop the container"
+    - 
+      command: "docker build -t tomcat ."
+      ignore_errors: true
+      name: "stop the container"
+    - 
+      command: "docker run -d --name tomcat -p 9090:8080 tomca"
+      ignore_errors: true
+      name: "stop the container"
